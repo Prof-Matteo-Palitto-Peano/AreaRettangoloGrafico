@@ -1,3 +1,5 @@
+package arearettangolografico;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,9 +17,9 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
-        jTextField1.setText(null);
-        jTextField2.setText(null);
-        jTextField3.setText(null);
+        baseRettangolo.setText(null);
+        altezzaRettangolo.setText(null);
+        areaRettangolo.setText(null);
     }
 
     /**
@@ -29,36 +31,36 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        calcola = new javax.swing.JButton();
+        cancella = new javax.swing.JButton();
+        baseRettangolo = new javax.swing.JTextField();
+        altezzaRettangolo = new javax.swing.JTextField();
+        areaRettangolo = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Calcola");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        calcola.setText("Calcola");
+        calcola.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                calcolaActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cancella");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cancella.setText("Cancella");
+        cancella.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cancellaActionPerformed(evt);
             }
         });
 
-        jTextField1.setText("jTextField1");
+        baseRettangolo.setText("jTextField1");
 
-        jTextField2.setText("jTextField2");
+        altezzaRettangolo.setText("jTextField2");
 
-        jTextField3.setText("jTextField3");
+        areaRettangolo.setText("jTextField3");
 
         jLabel1.setText("base");
 
@@ -73,22 +75,22 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(calcola)
+                    .addComponent(cancella))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(42, 42, 42)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(areaRettangolo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(altezzaRettangolo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(baseRettangolo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(114, 114, 114))
         );
         layout.setVerticalGroup(
@@ -98,17 +100,17 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(calcola)
+                            .addComponent(baseRettangolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))
                         .addGap(17, 17, 17)
-                        .addComponent(jButton2))
+                        .addComponent(cancella))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(altezzaRettangolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2)))
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(areaRettangolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addContainerGap(114, Short.MAX_VALUE))
         );
@@ -116,27 +118,27 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void calcolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcolaActionPerformed
         // TODO add your handling code here:
         // dichiaraz tre var double
         double base, altezza, area;
         // lettura casella di testo misura base
-        base = Double.parseDouble(jTextField1.getText());
+        base = Double.parseDouble(baseRettangolo.getText());
         // lettura casella testo misura altezza
-        altezza = Double.parseDouble(jTextField2.getText());
+        altezza = Double.parseDouble(altezzaRettangolo.getText());
         // calcolo dell'area
         area = base*altezza;
         // assegnazione risultato alla casella di testo
-        jTextField3.setText(Double.toString(area));
-    }//GEN-LAST:event_jButton1ActionPerformed
+        areaRettangolo.setText(Double.toString(area));
+    }//GEN-LAST:event_calcolaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void cancellaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancellaActionPerformed
         // TODO add your handling code here:
         // cancella testo delle caselle di testo
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
+        baseRettangolo.setText("");
+        altezzaRettangolo.setText("");
+        areaRettangolo.setText("");
+    }//GEN-LAST:event_cancellaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,13 +176,13 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField altezzaRettangolo;
+    private javax.swing.JTextField areaRettangolo;
+    private javax.swing.JTextField baseRettangolo;
+    private javax.swing.JButton calcola;
+    private javax.swing.JButton cancella;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
